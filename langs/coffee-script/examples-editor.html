@@ -1,0 +1,24 @@
+Classes
+*********************************************************************************
+<span class="k">class</span> <span class="nx">Animal</span>
+  <span class="nv">constructor: </span><span class="nf">(@name) -&gt;</span>
+
+  <span class="nv">move: </span><span class="nf">(meters) -&gt;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="nx">@name</span> <span class="o">+</span> <span class="s">&quot; moved </span><span class="si">#{</span><span class="nx">meters</span><span class="si">}</span><span class="s">m.&quot;</span>
+
+<span class="k">class</span> <span class="nx">Snake</span> <span class="k">extends</span> <span class="nx">Animal</span>
+  <span class="nv">move: </span><span class="nf">-&gt;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">&quot;Slithering...&quot;</span>
+    <span class="k">super</span> <span class="mi">5</span>
+
+<span class="k">class</span> <span class="nx">Horse</span> <span class="k">extends</span> <span class="nx">Animal</span>
+  <span class="nv">move: </span><span class="nf">-&gt;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">&quot;Galloping...&quot;</span>
+    <span class="k">super</span> <span class="mi">45</span>
+
+<span class="nv">sam = </span><span class="k">new</span> <span class="nx">Snake</span> <span class="s">&quot;Sammy the Python&quot;</span>
+<span class="nv">tom = </span><span class="k">new</span> <span class="nx">Horse</span> <span class="s">&quot;Tommy the Palomino&quot;</span>
+
+<span class="nx">sam</span><span class="p">.</span><span class="nx">move</span><span class="p">()</span>
+<span class="nx">tom</span><span class="p">.</span><span class="nx">move</span><span class="p">()</span>
+*********************************************************************************

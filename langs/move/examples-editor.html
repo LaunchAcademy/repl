@@ -1,0 +1,24 @@
+Conditionals
+*********************************************************************************
+<span class="nx">print</span> <span class="s1">&#39;Enter an integer: &#39;</span>
+<span class="nx">read</span> <span class="o">^</span><span class="p">(</span><span class="nx">str</span><span class="p">){</span>
+  <span class="nx">number</span> <span class="o">=</span> <span class="nb">parseInt</span> <span class="nx">str</span><span class="p">,</span> <span class="mi">10</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">number</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">print</span> <span class="nx">number</span><span class="p">,</span> <span class="s1">&#39;is odd.&#39;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">print</span> <span class="nx">number</span><span class="p">,</span> <span class="s1">&#39;is even.&#39;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+*********************************************************************************
+
+Fibonacci
+*********************************************************************************
+<span class="nx">fibonacci</span> <span class="o">=</span> <span class="o">^</span><span class="p">(</span><span class="nx">num</span><span class="p">){</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">num</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="mi">1</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">fibonacci</span><span class="p">(</span><span class="nx">num</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="nx">fibonacci</span><span class="p">(</span><span class="nx">num</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">print</span> <span class="nx">fibonacci</span> <span class="mi">9</span>
+*********************************************************************************

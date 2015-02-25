@@ -1,0 +1,24 @@
+Regular Expressions
+*********************************************************************************
+<span class="n">str</span> <span class="o">=</span> <span class="s2">&quot;I will drill for a well in Hull.&quot;</span>
+<span class="n">regex</span> <span class="o">=</span> <span class="no">Regexp</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="sr">/\w+ll/</span><span class="p">)</span>
+
+<span class="n">matchdata</span> <span class="o">=</span> <span class="n">regex</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+<span class="k">while</span> <span class="n">matchdata</span> <span class="o">!=</span> <span class="kp">nil</span>
+  <span class="nb">puts</span> <span class="n">matchdata</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
+  <span class="n">str</span> <span class="o">=</span> <span class="n">matchdata</span><span class="o">.</span><span class="n">post_match</span>
+  <span class="n">matchdata</span> <span class="o">=</span> <span class="n">regex</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+<span class="k">end</span>
+*********************************************************************************
+
+Factorial
+*********************************************************************************
+<span class="k">def</span> <span class="nf">fact</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="mi">1</span>
+  <span class="k">else</span>
+    <span class="n">n</span> <span class="o">*</span> <span class="n">fact</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+<span class="n">fact</span> <span class="mi">6</span>
+*********************************************************************************

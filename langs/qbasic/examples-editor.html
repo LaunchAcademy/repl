@@ -1,0 +1,25 @@
+Scopes
+*********************************************************************************
+<span class="k">DIM</span> <span class="k">SHARED</span> <span class="nv">MY_GLOBAL</span> <span class="k">AS</span> <span class="nv">STRING</span>
+<span class="nv">MY_GLOBAL</span> <span class="o">=</span> <span class="s">&quot;Starting value&quot;</span>
+<span class="k">DECLARE</span> <span class="k">SUB</span> <span class="nv">Quack</span> <span class="p">(</span><span class="nv">Q</span><span class="p">)</span>
+<span class="k">SUB</span> <span class="nv">Quack</span> <span class="p">(</span><span class="nv">Q</span><span class="p">)</span>
+  <span class="k">PRINT</span> <span class="nv">MY_GLOBAL</span>, <span class="nv">Q</span>
+<span class="k">END</span> <span class="k">SUB</span>
+<span class="nv">Quack</span> <span class="m">13</span>
+<span class="nv">MY_GLOBAL</span> <span class="o">=</span> <span class="s">&quot;New Value&quot;</span>
+<span class="nv">Quack</span> <span class="m">42</span>
+*********************************************************************************
+
+Factorial
+*********************************************************************************
+<span class="k">DECLARE</span> <span class="k">FUNCTION</span> <span class="nv">Factorial</span> <span class="p">(</span><span class="nv">n</span><span class="p">)</span>
+<span class="k">FUNCTION</span> <span class="nv">Factorial</span> <span class="p">(</span><span class="nv">n</span><span class="p">)</span>
+  <span class="k">IF</span> <span class="nv">n</span> <span class="o">=</span> <span class="m">0</span> <span class="k">THEN</span>
+    <span class="nv">Factorial</span> <span class="o">=</span> <span class="m">1</span>
+  <span class="k">ELSE</span>
+    <span class="nv">Factorial</span> <span class="o">=</span> <span class="nv">n</span> <span class="o">*</span> <span class="nv">Factorial</span><span class="p">(</span><span class="nv">n</span> <span class="o">-</span> <span class="m">1</span><span class="p">)</span>
+  <span class="k">END</span> <span class="k">IF</span>
+<span class="k">END</span> <span class="k">FUNCTION</span>
+<span class="k">PRINT</span> <span class="s">&quot;6! = &quot;</span>; <span class="nv">Factorial</span><span class="p">(</span><span class="m">6</span><span class="p">)</span>
+*********************************************************************************
